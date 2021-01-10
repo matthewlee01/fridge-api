@@ -21,6 +21,7 @@ const ElementSchema = new mongoose.Schema({
 	height: {
 		type: Number,
 		required: true
+	},
 	value: {
 		type: String,
 		default: "no value"
