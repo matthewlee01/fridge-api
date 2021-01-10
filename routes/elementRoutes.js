@@ -33,6 +33,16 @@ app.delete('/elements/:id', async (req, res) => {
 	}
 });
 
+app.patch('/elements/:id', async (req, res) => {
+	try {
+		await elementModel.findByIdAndUpdate(req.params.id, req.body)
+		await elementModel.save()
+		res.send(element)
+	} catch (err) {
+		res.status(500).send(err)
+	}
+});
+
 
 module.exports = app;
 
