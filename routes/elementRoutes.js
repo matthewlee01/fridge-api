@@ -38,6 +38,7 @@ app.patch('/elements/:id', async (req, res) => {
                 console.log("about to initiate findbyidandupdate");
 		await elementModel.findByIdAndUpdate(req.params.id, req.body)
                 console.log("successfully foundbyidandupdated");
+                res.status(200).send();
 
 	} catch (err) {
 		res.status(500).send(err)
