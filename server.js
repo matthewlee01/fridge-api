@@ -12,4 +12,4 @@ mongoose.connect(uri, {
 
 app.use(elementRouter);
 
-app.listen(3000, () => { console.log('server running!') });
+app.listen(process.env.PORT, () => { console.log('server running!') });
