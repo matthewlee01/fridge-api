@@ -35,11 +35,16 @@ app.delete('/elements/:id', async (req, res) => {
 
 app.patch('/elements/:id', async (req, res) => {
 	try {
+                console.log("about to initiate findbyidandupdate");
 		await elementModel.findByIdAndUpdate(req.params.id, req.body)
+                console.log("successfully foundbyidandupdated");
+
 		await elementModel.save()
+                console.log("successfully saved");
 		res.send(element)
 	} catch (err) {
 		res.status(500).send(err)
+                console.log(err);
 	}
 });
 
