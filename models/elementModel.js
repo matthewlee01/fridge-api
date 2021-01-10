@@ -25,7 +25,11 @@ const ElementSchema = new mongoose.Schema({
 	value: {
 		type: String,
 		default: "no value"
-	}
+	},
+        bgColor: {
+                type: String,
+                required: true
+        }
 });
 
 const Element = mongoose.model("Element", ElementSchema);
