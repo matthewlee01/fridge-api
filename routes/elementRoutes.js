@@ -12,6 +12,16 @@ app.get('/elements', async (req, res) => {
 	}
 });
 
+app.get('/elements/:address', async (req, res) => {
+	const elements = await elementModel.find({ address: req.params.address});
+
+	try {
+		res.send(elements);
+	} catch (err) {
+		res.status(500).send(err);
+	}
+});
+
 app.post('/elements', async (req, res) => {
 	const element = new elementModel(req.body);
 

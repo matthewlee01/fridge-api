@@ -29,7 +29,12 @@ const ElementSchema = new mongoose.Schema({
         bgColor: {
                 type: String,
                 required: true
+        },
+        address: {
+                type: String,
+                required: true
         }
+
 });
 
 const Element = mongoose.model("Element", ElementSchema);
