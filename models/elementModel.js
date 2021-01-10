@@ -5,15 +5,15 @@ const ElementSchema = new mongoose.Schema({
 		type: String,
 		lowercase: true,
 		required: true
-	}
+	},
 	x: {
 		type: Number,
 		required: true
-	}
+	},
 	y: {
 		type: Number,
 		required: true
-	}
+	},
 	value: {
 		type: String,
 		default: "no value"
