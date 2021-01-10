@@ -39,6 +39,8 @@ app.patch('/elements/:id', async (req, res) => {
 		await elementModel.findByIdAndUpdate(req.params.id, req.body)
                 console.log("successfully foundbyidandupdated");
 
+                await elementModel.markModified("value");
+                console.log("successfully markedmodified");
 		await elementModel.save()
                 console.log("successfully saved");
 		res.send(element)
