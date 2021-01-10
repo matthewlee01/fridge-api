@@ -7,19 +7,19 @@ const ElementSchema = new mongoose.Schema({
 		required: true
 	},
 	x: {
-		type: Number,
+		type: String,
 		required: true
 	},
 	y: {
-		type: Number,
+		type: String,
 		required: true
 	},
 	width: {
-		type: Number,
+		type: String,
 		required: true
 	},
 	height: {
-		type: Number,
+		type: String,
 		required: true
 	},
 	value: {
